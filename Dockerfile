@@ -5,7 +5,7 @@ FROM headscale/headscale:latest-debug AS source
 FROM alpine:latest
 
 # 从官方镜像中拷贝二进制文件
-COPY --from=source /bin/headscale /bin/headscale
+COPY --from=source /usr/local/bin/headscale /bin/headscale
 
 # 暴露端口
 EXPOSE 8080
